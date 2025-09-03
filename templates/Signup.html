@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="/static/Signup.css">
+ 
+</head>
+<body>
+  <div class="container">
+    <div class="info-box">
+      <h2>Welcome to the ExpiryEye</h2>
+      <p>Simplify your life by tracking product expiry dates with ease. Upload, analyze, and stay notified—never let an item go to waste again!</p>
+    </div>
+    <div class="signup-box">
+      <h2>SIGN UP</h2>
+      <form id="signupForm" onsubmit="return handleSignup(event)">
+        <div class="form-group d-flex">
+          <input type="text" class="form-control" id="fname" placeholder="First Name" required />
+          <input type="text" class="form-control" id="lname" placeholder="Last Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" id="uemail" placeholder="Email Address" required />
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="pass" placeholder="Password" required />
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" id="conPass" placeholder="Confirm Password" required />
+        </div>
+        <button type="submit" class="btn-submit">Submit</button>
+        <div class="text-center">
+          <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/static/Signup.js"></script>
+</body>
+</html>

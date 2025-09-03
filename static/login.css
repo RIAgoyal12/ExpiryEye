@@ -1,0 +1,116 @@
+
+        body {
+            color: #fff;
+            display: flex;
+            min-height: 100vh;
+            justify-content: center; /* Centers content horizontally */
+            align-items: center; /* Centers content vertically */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            position: relative; /* So that pseudo-element can be positioned */
+        }
+
+        /* Blurred background */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.pexels.com/photos/18911016/pexels-photo-18911016/free-photo-of-an-alarm-clock-on-a-white-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
+            filter: blur(2px); /* Apply blur effect only to the background */
+            z-index: -1; /* Makes sure it stays behind the content */
+        }
+
+        .container {
+            display: flex;
+            width: 900px;
+            height: auto;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            overflow: hidden; /* Ensures rounded corners apply to both sections */
+        }
+
+        /* Intro Box */
+        .info-box {
+            flex: 1; /* Takes equal height with login box */
+            background: rgba(255, 255, 255, 0.9); /* Light translucent background */
+            color: #333;
+            padding: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .info-box h2 {
+            margin: 0;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+
+        .info-box p {
+            margin-top: 15px;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Login Box */
+        .login-box {
+            flex: 1; /* Takes equal height with info box */
+            background: rgba(0, 0, 0, 0.7); /* Dark translucent background */
+            color: #fff;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .login-box h1 {
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .login-box button {
+            background: #333;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: 100%;
+        }
+
+        .login-box button:hover {
+            background: #444;
+        }
+
+        .signup-link {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .signup-link a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            color: #fff;
+        }
